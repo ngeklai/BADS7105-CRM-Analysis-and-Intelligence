@@ -11,3 +11,5 @@ However, the following assumption needs to be agreed upon;
 * Dataset: a list of customer reviews
 * Method: NLP Document Similarity
 * Brief Steps: Customer Reviews -> Documents -> TF-IDF Vectorization -> Cosine Similarity
+
+## Step 1: Data Preparation
