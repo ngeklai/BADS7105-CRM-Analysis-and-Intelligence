@@ -33,3 +33,18 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 from sklearn.feature_extraction.text import TfidfVectorizer 
 import numpy as np 
 ```
+## Step 2: Text Preprocessing
+
+```javascript
+stopwords = list(pythainlp.corpus.thai_stopwords())
+removed_words = [' ', '  ', '\n', 'ร้าน', '(', ')' , '           ']
+screening_words = stopwords + removed_words
+
+def tokenize_with_space(sentence):
+  merged = ''
+  words = pythainlp.word_tokenize(str(sentence), engine='newmm')
+  for word in words:
+    if word not in screening_words:
+      merged = merged + ',' + word
+  return merged[1:]
+  ```
