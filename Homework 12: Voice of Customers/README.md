@@ -76,3 +76,7 @@ def most_similar(doc_id,similarity_matrix,matrix):
         print (f'Document: {documents.iloc[ix]["Review"]}')
         print (f'{matrix} : {similarity_matrix[doc_id][ix]}')
 ```
+
+```javascript
+most_similar(1,pairwise_similarities,'Cosine Similarity')
+```
