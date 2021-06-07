@@ -13,6 +13,9 @@ However, the following assumption needs to be agreed upon;
 * Brief Steps: Customer Reviews -> Documents -> TF-IDF Vectorization -> Cosine Similarity
 
 ## Step 1: Data Preparation
-    import pandas as pd
-    documents = pd.read_csv('/content/CustomerReviews(R01).csv')
-    documents['Restaurant']
+
+```javascript
+import pandas as pd
+documents = pd.read_csv('/content/CustomerReviews(R01).csv')
+documents['Restaurant']
+```
