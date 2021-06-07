@@ -1,7 +1,8 @@
 # Who Is Our Competitor? Cosine Similarity Approach Based on Customer Reviews.
-Supposed that you were a business owner, you wanted to identify who your competitors are in the market. 
-As the market has been developing, commercial landscape might change, and turns to be different from the beginning one. 
-As a result, there is a need to verify/ benchmark your market position.
+Suppose that you were a business owner. By which means would you use to identify who your competitors are in the market?
+
+As the market has been developing, commercial landscape might be changed and it turns to be different from what you expected since the beginning. 
+Hence, there is a need to verify/ benchmark your market position.
 Actually, there are several ways to identify your competitors. But, a method I am proposing here is quite simple, fast, and at cheap price.
 However, the following assumption needs to be agreed upon;
 
