@@ -47,3 +47,4 @@ def tokenize_with_space(sentence):
       merged = merged + ',' + word
   return merged[1:]
   ```
+## Step 3: TF-IDF Conversion
