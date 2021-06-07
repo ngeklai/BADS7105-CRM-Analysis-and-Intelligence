@@ -21,7 +21,7 @@ Referring to NLP Document Similarity, we then concatenate customer reviews of ea
 After combining customer reviews of each restaurant completely, we have in our hand now three documents. 
 We import them by Python and sequent procedures.
 
-## Step 1: Install & Import Libraries
+### Step 1: Install & Import Libraries
 We have to install an upgraded version of PyThaiNLP as customer reviews are done in Thai language.
 Also, we have to use other necessary libraries and modules.
 ```javascript
@@ -32,7 +32,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 from sklearn.feature_extraction.text import TfidfVectorizer 
 import numpy as np 
 ```
-## Step 2: Preprocess Texts
+### Step 2: Preprocess Texts
 Handling a text task requires a text preparation, in which a text is cleansed by removing meaningless word and then tokenized.
 ```javascript
 stopwords = list(pythainlp.corpus.thai_stopwords())
@@ -47,7 +47,7 @@ def tokenize_with_space(sentence):
       merged = merged + ',' + word
   return merged[1:]
   ```
-## Step 3: Transform Text to TF-IDF and Vector
+### Step 3: Transform Text to TF-IDF and Vector
 Now, all documents are set ready. We then convert words into TF-IDF first and vectorize it.
 ```javascript
 tfidfvectoriser=TfidfVectorizer()
@@ -55,7 +55,7 @@ tfidfvectoriser.fit(documents['Review_tokenized'] )
 
 tfidf_vectors=tfidfvectoriser.transform(documents['Review_tokenized'] )
 ```
-## Step 4: Calculate Cosine Similarity
+### Step 4: Calculate Cosine Similarity
 Upon putting TF-IDF into a vector space, we deploy dot product for cosine similarity calculation.
 The calculation is conducted by a pairwise of document indices.
 ```javascript
@@ -84,3 +84,8 @@ Applicably, you can change an index in the function argument. The index variance
 ```javascript
 most_similar(0,pairwise_similarities,'Cosine Similarity')
 ```
+## Result
+By this assignment, you can identify competitor of each shabu restaurant, as follow;
+** Momo Paradise: Shabushi is its competitor
+** Shabushi: Momo Paradise is its competitor
+** Khanoi: Shabushi is its competitor
