@@ -24,7 +24,6 @@ We import them by Python and sequent procedures.
 ## Step 1: Install & Import Libraries
 We have to install an upgraded version of PyThaiNLP as customer reviews are done in Thai language.
 Also, we have to use other necessary libraries and modules.
-
 ```javascript
 !pip install --upgrade pythainlp
 import pythainlp
@@ -35,12 +34,10 @@ import numpy as np
 ```
 ## Step 2: Text Preprocessing
 Handling a task related to text requires a text preparation, in which a text is cleansed by removing meaningless word and then tokenized.
-
 ```javascript
 stopwords = list(pythainlp.corpus.thai_stopwords())
 removed_words = [' ', '  ', '\n', 'ร้าน', '(', ')' , '           ']
 screening_words = stopwords + removed_words
-
 def tokenize_with_space(sentence):
   merged = ''
   words = pythainlp.word_tokenize(str(sentence), engine='newmm')
