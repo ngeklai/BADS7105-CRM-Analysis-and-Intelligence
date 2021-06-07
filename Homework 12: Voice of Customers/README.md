@@ -90,4 +90,4 @@ By this assignment, you can identify competitor of each shabu restaurant, as fol
 * Shabushi: Momo Paradise is its competitor
 * Khanoi: Shabushi is its competitor
 
-https://colab.research.google.com/drive/1VvDVUQu-YFxuXupTbvVENJkDUNrb3JgK#scrollTo=Ni-Q5SZlMzh3
+Google Colab [![Open In Collab]https://colab.research.google.com/drive/1VvDVUQu-YFxuXupTbvVENJkDUNrb3JgK#scrollTo=Ni-Q5SZlMzh3
