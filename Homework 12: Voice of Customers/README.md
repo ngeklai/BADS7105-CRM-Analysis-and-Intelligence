@@ -13,14 +13,10 @@ However, the following assumption needs to be agreed upon;
 * Brief Steps: Customer Reviews -> Documents -> TF-IDF Vectorization -> Cosine Similarity
 
 By this assignment, we are provided with list of customer reviews about three shabu restaurants operating mainly in BKK, Thailand.
-Such list is comprised of the following columns:
-Review ID	
-Restaurant ID
-Restaurant	
-User	
-Headline	
-Review
-Rating
+Such list is comprised of 8 columns; Review ID, Restaurant ID, Restaurant, User, Headline, Review, and Rating.
+
+NOTE:
+Referring to NLP Document Similarity, we then concatenate customer reviews of each restaurant, generating three different texts (documents).
 
 ## Step 1: Data Preparation
 
