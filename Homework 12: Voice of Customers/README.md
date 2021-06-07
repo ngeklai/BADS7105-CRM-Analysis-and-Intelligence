@@ -12,8 +12,19 @@ However, the following assumption needs to be agreed upon;
 * Method: NLP Document Similarity
 * Brief Steps: Customer Reviews -> Documents -> TF-IDF Vectorization -> Cosine Similarity
 
+By this assignment, we are provided with list of customer reviews about three shabu restaurants operating mainly in BKK, Thailand.
+Such list is comprised of the following columns:
+Review ID	
+Restaurant ID
+Restaurant	
+User	
+Headline	
+Review
+Rating
+
 ## Step 1: Data Preparation
 
+Comments
 ```javascript
 import pandas as pd
 documents = pd.read_csv('/content/CustomerReviews(R01).csv')
