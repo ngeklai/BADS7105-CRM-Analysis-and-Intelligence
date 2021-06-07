@@ -33,7 +33,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np 
 ```
 ## Step 2: Text Preprocessing
-Handling a task related to text requires a text preparation, in which a text is cleansed by removing meaningless word and then tokenized.
+Handling a text task requires a text preparation, in which a text is cleansed by removing meaningless word and then tokenized.
 ```javascript
 stopwords = list(pythainlp.corpus.thai_stopwords())
 removed_words = [' ', '  ', '\n', 'ร้าน', '(', ')' , '           ']
