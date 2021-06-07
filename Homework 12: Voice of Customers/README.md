@@ -77,8 +77,8 @@ def most_similar(doc_id,similarity_matrix,matrix):
         print (f'Document: {documents.iloc[ix]["Review"]}')
         print (f'{matrix} : {similarity_matrix[doc_id][ix]}')
 ```
-The below function is our product target.
-You can change an index in the function argument. The index variance represents documents (customer reviews) of each shabu restaurant.
+The below function is the product I have proposed for this assignment.
+Applicably, you can change an index in the function argument. The index variance represents documents (customer reviews) of each shabu restaurant.
 ```javascript
 most_similar(0,pairwise_similarities,'Cosine Similarity')
 ```
