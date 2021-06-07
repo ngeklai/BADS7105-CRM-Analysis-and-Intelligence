@@ -55,3 +55,24 @@ tfidfvectoriser.fit(documents['Review_tokenized'] )
 
 tfidf_vectors=tfidfvectoriser.transform(documents['Review_tokenized'] )
 ```
+## Step 4: Calculate Cosine Similarity
+
+```javascript
+pairwise_similarities=np.dot(tfidf_vectors,tfidf_vectors.T).toarray()
+pairwise_similarities
+```
+
+```javascript
+def most_similar(doc_id,similarity_matrix,matrix):
+    print (f'Document: {documents.iloc[doc_id]["Review"]}')
+    print ('\n')
+    print ('Similar Documents:')
+    if matrix=='Cosine Similarity':
+        similar_ix=np.argsort(similarity_matrix[doc_id])[::-1]
+    for ix in similar_ix:
+        if ix==doc_id:
+            continue
+        print('\n')
+        print (f'Document: {documents.iloc[ix]["Review"]}')
+        print (f'{matrix} : {similarity_matrix[doc_id][ix]}')
+```
