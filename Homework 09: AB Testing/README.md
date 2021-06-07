@@ -12,6 +12,7 @@ We asked participants three questions.
 
 ## 2. Response
 We received 41 replies, accounting for 68.33% of response rate. We found that the majority of respondents (over 80%) purchased a Burger King several months a time.
+
 ![image](https://user-images.githubusercontent.com/59596996/121039830-9ebec600-c7db-11eb-8813-ffdcfb85679e.png)
 
 
