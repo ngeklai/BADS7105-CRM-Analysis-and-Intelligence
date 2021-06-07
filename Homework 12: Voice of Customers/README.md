@@ -18,9 +18,13 @@ Such list is comprised of eight columns; Review ID, Restaurant ID, Restaurant, U
 NOTE:
 Referring to NLP Document Similarity, we then concatenate customer reviews of each restaurant, generating three different texts (documents).
 
-## Step 1: Install & Import Libraries
+After combining customer reviews of each restaurant completely, we have in our hand now three documents. 
+We import them by Python and sequent procedures.
 
-Comments
+## Step 1: Install & Import Libraries
+We have to install an upgraded version of PyThaiNLP as customer reviews are done in Thai language.
+Also, we have to use other necessary libraries and modules.
+
 ```javascript
 !pip install --upgrade pythainlp
 import pythainlp
