@@ -48,3 +48,10 @@ def tokenize_with_space(sentence):
   return merged[1:]
   ```
 ## Step 3: TF-IDF Conversion
+
+```javascript
+tfidfvectoriser=TfidfVectorizer()
+tfidfvectoriser.fit(documents['Review_tokenized'] )
+
+tfidf_vectors=tfidfvectoriser.transform(documents['Review_tokenized'] )
+```
