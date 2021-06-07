@@ -38,6 +38,7 @@ Handling a task related to text requires a text preparation, in which a text is 
 stopwords = list(pythainlp.corpus.thai_stopwords())
 removed_words = [' ', '  ', '\n', 'ร้าน', '(', ')' , '           ']
 screening_words = stopwords + removed_words
+
 def tokenize_with_space(sentence):
   merged = ''
   words = pythainlp.word_tokenize(str(sentence), engine='newmm')
