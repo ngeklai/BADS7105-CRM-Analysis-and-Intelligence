@@ -6,7 +6,7 @@ Actually, there are several ways to identify your competitors. But, a method I a
 However, the following assumption needs to be agreed upon;
 
 ## Concept
-Assumption: a competitor shares a common trait of your customers.
-Dataset: a list of customer reviews
-Method: NLP Document Similarity
-Brief Steps: Customer Reviews -> Documents -> TF-IDF Vectorization -> Cosine Similarity
+* Assumption: a competitor shares a common trait of your customers.
+* Dataset: a list of customer reviews
+* Method: NLP Document Similarity
+* Brief Steps: Customer Reviews -> Documents -> TF-IDF Vectorization -> Cosine Similarity
