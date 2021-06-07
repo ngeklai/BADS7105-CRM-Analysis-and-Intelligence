@@ -86,6 +86,6 @@ most_similar(0,pairwise_similarities,'Cosine Similarity')
 ```
 ## Result
 By this assignment, you can identify competitor of each shabu restaurant, as follow;
-**Momo Paradise: Shabushi is its competitor
-**Shabushi: Momo Paradise is its competitor
-**Khanoi: Shabushi is its competitor
+* Momo Paradise: Shabushi is its competitor
+* Shabushi: Momo Paradise is its competitor
+* Khanoi: Shabushi is its competitor
