@@ -21,5 +21,6 @@ According to the result from both groups, it seems those with a low purchase fre
 
 
 ## 4. Conclusion
-After a Levine's Test
+After conducting Levine's Test, we found that the variance of both group were equal. With 95% Confidence Interval, we could not reject that the mean score of new logo and the old one were significantly different (p-value =0.056). That is, the new logo caused no impact on potential increase of purchase tendency.
+
 ![image](https://user-images.githubusercontent.com/59596996/121039635-76cf6280-c7db-11eb-9cc1-44c0b5adfad8.png)
