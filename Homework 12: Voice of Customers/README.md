@@ -32,7 +32,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 from sklearn.feature_extraction.text import TfidfVectorizer 
 import numpy as np 
 ```
-## Step 2: Text Preprocessing
+## Step 2: Preprocess Texts
 Handling a text task requires a text preparation, in which a text is cleansed by removing meaningless word and then tokenized.
 ```javascript
 stopwords = list(pythainlp.corpus.thai_stopwords())
@@ -47,7 +47,7 @@ def tokenize_with_space(sentence):
       merged = merged + ',' + word
   return merged[1:]
   ```
-## Step 3: TF-IDF Conversion
+## Step 3: Transform Text to TF-IDF and Vector
 Now, all documents are set ready. We then convert words into TF-IDF first and vectorize it.
 ```javascript
 tfidfvectoriser=TfidfVectorizer()
@@ -56,12 +56,13 @@ tfidfvectoriser.fit(documents['Review_tokenized'] )
 tfidf_vectors=tfidfvectoriser.transform(documents['Review_tokenized'] )
 ```
 ## Step 4: Calculate Cosine Similarity
-
+Upon putting TF-IDF into a vector space, we deploy dot product for cosine similarity calculation.
+The calculation is conducted by a pairwise of document indices.
 ```javascript
 pairwise_similarities=np.dot(tfidf_vectors,tfidf_vectors.T).toarray()
 pairwise_similarities
 ```
-
+We will develop a function to support an identification of the most similar document.
 ```javascript
 def most_similar(doc_id,similarity_matrix,matrix):
     print (f'Document: {documents.iloc[doc_id]["Review"]}')
@@ -76,7 +77,8 @@ def most_similar(doc_id,similarity_matrix,matrix):
         print (f'Document: {documents.iloc[ix]["Review"]}')
         print (f'{matrix} : {similarity_matrix[doc_id][ix]}')
 ```
-
+The below function is our product target.
+You can change an index in the function argument. The index variance represents documents (customer reviews) of each shabu restaurant.
 ```javascript
-most_similar(1,pairwise_similarities,'Cosine Similarity')
+most_similar(0,pairwise_similarities,'Cosine Similarity')
 ```
