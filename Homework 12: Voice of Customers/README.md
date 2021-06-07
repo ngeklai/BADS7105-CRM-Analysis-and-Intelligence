@@ -1,4 +1,5 @@
 # Who Is Our Competitor? Cosine Similarity Approach Based on Customer Reviews.
+**Google Colab:**[![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1VvDVUQu-YFxuXupTbvVENJkDUNrb3JgK?usp=sharing) 
 Suppose that you were a business owner. By which means would you use to identify who your competitors are in the market?
 
 As the market has been developing, commercial landscape might be changed and it turns to be different from what you expected since the beginning. 
@@ -89,5 +90,3 @@ By this assignment, you can identify competitor of each shabu restaurant, as fol
 * Momo Paradise: Shabushi is its competitor
 * Shabushi: Momo Paradise is its competitor
 * Khanoi: Shabushi is its competitor
-
-Google Colab [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1VvDVUQu-YFxuXupTbvVENJkDUNrb3JgK?usp=sharing)
