@@ -10,7 +10,7 @@ However, the following assumption needs to be agreed upon;
 * Assumption: a competitor shares a common trait of your customers.
 * Dataset: a list of customer reviews
 * Method: NLP Document Similarity
-* Brief Steps: Customer Reviews -> Documents -> TF-IDF Vectorization -> Cosine Similarity
+* Steps in Brief: Customer Reviews -> Documents -> TF-IDF Vectorization -> Cosine Similarity
 
 By this assignment, we are provided with list of customer reviews about three shabu restaurants operating mainly in BKK, Thailand.
 Such list is comprised of eight columns; Review ID, Restaurant ID, Restaurant, User, Headline, Review, and Rating.
