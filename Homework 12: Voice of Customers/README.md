@@ -5,5 +5,5 @@ As a result, there is a need to verify/ benchmark your market position.
 
 There are several ways to identify your competitors. But, a method I am proposing here is quite simple, fast, and at cheap price.
 However, the following assumption needs to be agreed upon;
-## Assumption: A competitor shares a common trait of your customers.
+### Assumption: A competitor shares a common trait of your customers.
 
