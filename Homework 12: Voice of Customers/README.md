@@ -48,7 +48,7 @@ def tokenize_with_space(sentence):
   return merged[1:]
   ```
 ## Step 3: TF-IDF Conversion
-
+Now, all documents are set ready. We then convert words into TF-IDF first and vectorize it.
 ```javascript
 tfidfvectoriser=TfidfVectorizer()
 tfidfvectoriser.fit(documents['Review_tokenized'] )
