@@ -53,7 +53,8 @@ rule.sort_values('lift',ascending=False).head(5)
 ![Picture6](https://user-images.githubusercontent.com/59596996/122671996-82ffea80-d1f3-11eb-9839-b07bc274fb1a.jpg)
 
 ### Step 5: Visualize the Network
-
+You will see that, for example, those who puchased grilled beef had a strong correlation in purchasing lego and authorized software.
+So, we can use a network graph to generate a recommendation for other products as for an upselling technique when your client makes a purchase. 
 ```javascript
 plt.figure(figsize=(15, 15))
 G = nx.from_pandas_edgelist(simple_rules, source='antecedents', target='consequents', edge_attr='lift')
