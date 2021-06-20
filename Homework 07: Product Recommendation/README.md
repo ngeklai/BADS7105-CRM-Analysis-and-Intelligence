@@ -33,3 +33,31 @@ plt.figure(figsize=(10, 8))
 df.sum(axis=0).sort_values(ascending=False).tail(15).plot(kind='barh').invert_yaxis()
 ```
 ![Picture4](https://user-images.githubusercontent.com/59596996/122671718-3a93fd00-d1f2-11eb-8f09-93fdd0045ddc.png)
+
+### Step 4: Conduct Market Basket Analysis
+Then, we perform an analysis to know which items are purchased simulatenously or, so-called, in the same basket. This is known as Market Basket Analysis.
+```javascript
+freq_itemsets = apriori(df, min_support=0.5, use_colnames=True)
+freq_itemsets.head(10)
+```
+![Picture5](https://user-images.githubusercontent.com/59596996/122671943-2b617f00-d1f3-11eb-9bc4-a545d289e973.jpg)
+
+```javascript
+rule = association_rules(frequent_itemsets, metric='lift', min_threshold=1)
+rule.sort_values('lift',ascending=False).head(5)
+```
+![Picture6](https://user-images.githubusercontent.com/59596996/122671996-82ffea80-d1f3-11eb-9839-b07bc274fb1a.jpg)
+
+### Step 5: Visualize the Network
+
+```javascript
+plt.figure(figsize=(15, 15))
+G = nx.from_pandas_edgelist(simple_rules, source='antecedents', target='consequents', edge_attr='lift')
+pos = nx.circular_layout(G)
+nx.draw_networkx_nodes(G, pos, nodelist=dict(G.degree).keys(), node_size=[s*500 for s in dict(G.degree).values()], node_color='salmon')
+nx.draw_networkx_labels(G, pos)
+nx.draw_networkx_edges(G, pos, alpha=0.3, width=[w for w in dict(G.degree).values()], edge_color='slategray')
+nx.draw_networkx_edge_labels(G, pos, nx.get_edge_attributes(G, 'lift'))
+plt.show()
+```
+![Picture7](https://user-images.githubusercontent.com/59596996/122672061-d40fde80-d1f3-11eb-8ee5-e2482032e1fa.png)
