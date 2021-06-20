@@ -1,4 +1,7 @@
 # Product Recommendations
+We are provided with a list of multi items purchased by 44 classmates. So, we will take this chance to apply graph network for a product recommendation system.
+**Google Colab:** https://colab.research.google.com/drive/1xKXGlIYUFPAJKAHcTxsi8nO4WG5U79oR?usp=sharing
+
 ### Step 1: Import Libraries
 Below are libraries and modules we need for this task.
 ```javascript
