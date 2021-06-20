@@ -1,4 +1,4 @@
-# Product Recommendations
+# Product Recommendation
 We are provided with a list of multi items purchased by 44 classmates. So, we will take this chance to apply network graph for a product recommendation system.
 
 **Google Colab:** [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xKXGlIYUFPAJKAHcTxsi8nO4WG5U79oR?usp=sharing)
