@@ -51,3 +51,8 @@ I use a stack column chart to display numbers of customers by each movement cate
 ![Picture8](https://user-images.githubusercontent.com/59596996/122715835-b1cd9d80-d293-11eb-88f2-9a0459214a0e.jpg)
 
 ### 3. Gain insights
+The visualization produces some significant messages the management body of this supermarket to consider.
+
+****New Customers:**** The supermarket welcomed a huge number of new customers early 2016. Unfortunately, the numbers have been diminished each month since then. This calls an immediate action from marketing managers.
+***Reactivated Customers:**** The marketing activities which aimed at (1) refreshing old customers and (2) retaining current customers were quite productive as evidenced by an increasing trend of number of Reactivated Customers and Repeat Customers throughout these years.
+***Churn:**** The churn rate looked stable, except in Jul 2008. As you can see, when compared with the same period in previous years, this supermarket faced with a big decline in both reactivate and repetitative sales, and they turned to be a churn. 
