@@ -49,6 +49,8 @@ freq_itemsets.head(10)
 ```
 ![Picture5](https://user-images.githubusercontent.com/59596996/122671943-2b617f00-d1f3-11eb-9bc4-a545d289e973.jpg)
 
+#### Step 4.2: Generating Rules
+The above-mentioned Strong Rule is the rule associating itemsets by a high degree of Confidence or Lift
 ```javascript
 rule = association_rules(frequent_itemsets, metric='lift', min_threshold=1)
 rule.sort_values('lift',ascending=False).head(5)
