@@ -6,7 +6,7 @@ Customer movement analysis will be based on the following categories;
 * Reactivated customers
 * Churn
 
-### Prepare data via SQL
+### 1. Prepare data via SQL
 ```SQL
 select  SHOP_MONTH,
         CUST_CODE,
@@ -44,5 +44,7 @@ where TXN_LM is not null
 ;
 ```
 
-### Visualize output by PowerBI
+### 2. Visualize output by PowerBI
 ![Picture8](https://user-images.githubusercontent.com/59596996/122715835-b1cd9d80-d293-11eb-88f2-9a0459214a0e.jpg)
+
+### 3. Gain insights
