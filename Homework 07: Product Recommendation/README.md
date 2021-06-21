@@ -38,8 +38,9 @@ df.sum(axis=0).sort_values(ascending=False).tail(15).plot(kind='barh').invert_ya
 ```
 ![Picture4](https://user-images.githubusercontent.com/59596996/122671718-3a93fd00-d1f2-11eb-8f09-93fdd0045ddc.png)
 
+Then, we perform an analysis to know which items are purchased simulatenously or, so-called, in the same basket. This is known as Market Basket Analysis.
 ### Step 4: Conduct Market Basket Analysis
-Then, we perform an analysis to know which items are purchased simulatenously or, so-called, in the same basket. This is known as Market Basket Analysis. Apriori Algorithm is employed in this case.
+Market Basket Analysis could be done by setting up Association Rule, in which you will two challenges; one is identifying "Frequent Itemsets" and another is constructing "Strong Rule". Apriori Algorithm is helpful for these purposes.
 ```javascript
 freq_itemsets = apriori(df, min_support=0.5, use_colnames=True)
 freq_itemsets.head(10)
