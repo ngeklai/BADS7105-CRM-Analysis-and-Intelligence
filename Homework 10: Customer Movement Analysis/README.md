@@ -47,6 +47,7 @@ where TXN_LM is not null
 
 ### 2. Visualize output by PowerBI
 I use a stack column chart to display numbers of customers by each movement category.
+
 ![Picture8](https://user-images.githubusercontent.com/59596996/122715835-b1cd9d80-d293-11eb-88f2-9a0459214a0e.jpg)
 
 ### 3. Gain insights
