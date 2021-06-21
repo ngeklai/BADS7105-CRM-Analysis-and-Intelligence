@@ -1,12 +1,13 @@
 # Customer Movement Analysis
-This task is about analyzing movements of customers of a supermarket. The raw data comes in the size of 22 columns x 956K rows. I will use Google BigQuery for data preparation process and PowerBI to visualize and gain insight(s) from the result.
+This task is about analyzing movements of customers of a supermarket. The raw data is a daily record from 2006 to 2008, 22 columns x 956K rows. I will use Google BigQuery for data preparation process and PowerBI to visualize and gain insight(s) from the result.
 Customer movement analysis will be based on the following categories;
 * New customers
 * Repetitive customers
 * Reactivated customers
 * Churn
 
-### 1. Prepare data via SQL
+### 1. Prepare data via Google BigQuery
+Below is my SQL script for this task.
 ```SQL
 select  SHOP_MONTH,
         CUST_CODE,
@@ -45,6 +46,7 @@ where TXN_LM is not null
 ```
 
 ### 2. Visualize output by PowerBI
+I use a stack column chart to display numbers of customers by each movement category.
 ![Picture8](https://user-images.githubusercontent.com/59596996/122715835-b1cd9d80-d293-11eb-88f2-9a0459214a0e.jpg)
 
 ### 3. Gain insights
