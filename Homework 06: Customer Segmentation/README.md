@@ -88,9 +88,12 @@ df_importance.sort_values('Importance').plot.barh(title='Repeat-Purchase Custome
 As the result, this K-mean model listed 5 important features; CUST_LIFETIME, DURATION_FROM_LAST_PURCHASE, STD_MONTHLY_SPEND, STD_MONTHLY_VISIT, and AVG_MONTHLY_VISIT.
 ### 5. Result Analysis
 As K=3, I name these 3 clusters as Churn, Active, and Premium. By the density plots, I could explore the characteristics of each cluster the density plots as follow;
-****Cluster "Churn":**** Customers of this cluster made only 1-time purchase, and are not active for over 1 year.
-****Cluster "Active":**** Customers are still active within 3 months. They are not a frequent customer, or visit the supermarket less than 4 times a month. By each visit, they spend less than 300 USD.
-****Cluster "Premium":**** Customers come for shopping at least 4 times a month, and spend more than 300 USD per visit.
+
+****Churn:**** Customers of this cluster made only 1-time purchase, and are not active for over 1 year.
+
+****Active:**** Customers are still active within 3 months. They are not a frequent customer, or visit the supermarket less than 4 times a month. By each visit, they spend less than 300 USD.
+
+****Premium:**** Customers come for shopping at least 4 times a month, and spend more than 300 USD per visit.
 ```python
 df_eda = df_cluster[['CLUSTER','TOTAL_SPEND','TOTAL_VISIT','AVG_MONTHLY_SPEND','STD_MONTHLY_SPEND','AVG_MONTHLY_VISIT',
                      'STD_MONTHLY_VISIT','MODE_BASKET_SIZE','CUST_LIFETIME','DURATION_FROM_FIRST_PURCHASE','DURATION_FROM_LAST_PURCHASE']]
