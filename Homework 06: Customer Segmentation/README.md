@@ -44,3 +44,15 @@ GROUP BY
 ORDER BY
     S.CUST_CODE
 ```
+### 2. Import libraries and modules
+All libraries and modules necessitated for this task are imported.
+```python
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import silhouette_score
+from sklearn.preprocessing import scale, StandardScaler
+```
