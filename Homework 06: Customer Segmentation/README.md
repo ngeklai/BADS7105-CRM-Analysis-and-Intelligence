@@ -86,3 +86,33 @@ df_importance.sort_values('Importance').plot.barh(title='Repeat-Purchase Custome
 ![Picture11](https://user-images.githubusercontent.com/59596996/122944458-0b23f280-d3a2-11eb-8ddd-1cc139d875b5.png)
 
 As the result, this K-mean model listed 5 important features; CUST_LIFETIME, DURATION_FROM_LAST_PURCHASE, STD_MONTHLY_SPEND, STD_MONTHLY_VISIT, and AVG_MONTHLY_VISIT.
+### 5. Result Analysis
+As K=3, I name these 3 clusters as Churn, Active, and Premium. By the density plots, I could explore the characteristics of each cluster the density plots as follow;
+* #Churn: One time purchase and not active for over 1 year.
+* 
+```python
+df_eda = df_cluster[['CLUSTER','TOTAL_SPEND','TOTAL_VISIT','AVG_MONTHLY_SPEND','STD_MONTHLY_SPEND','AVG_MONTHLY_VISIT',
+                     'STD_MONTHLY_VISIT','MODE_BASKET_SIZE','CUST_LIFETIME','DURATION_FROM_FIRST_PURCHASE','DURATION_FROM_LAST_PURCHASE']]
+df_eda.sort_values(by=['CLUSTER'], inplace=True)
+df_eda['CLUSTER'].replace({0:'Churned',1:'Active',2:'Premium'}, inplace=True)
+fig, axes = plt.subplots(5, 2, figsize=(12, 20), tight_layout=True)
+axes = axes.ravel()
+for col, ax in zip(df_eda.iloc[:,1:].columns, axes):
+  sns.kdeplot(data=df_eda, x=col, hue='CLUSTER', palette='tab10', ax=ax)
+plt.show()
+```
+![Picture12](https://user-images.githubusercontent.com/59596996/122954284-7fae5f80-d3a9-11eb-8006-c920ad1340d1.png)
+
+From the density plots, it can be concluded as below.
+
+CHURNED
+One time purchase
+Not active for over 1 year
+ACTIVE
+Still active within 3 months
+Visit not frequently (< 4 times/month)
+Spend less money per visit (< 300 USD/time)
+PREMIUM
+Still active within 3 months
+Visit frequently (>= 4 times/month)
+Spend much money per visit (>= 300 USD/time)
