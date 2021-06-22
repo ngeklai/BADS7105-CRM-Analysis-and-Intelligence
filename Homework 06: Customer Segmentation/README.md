@@ -1,7 +1,7 @@
 # Customer Segmentation
 I will use Supermarket dataset to segment customers by querying data from Google BigQuery and creating K-Mean clustering model by Python in Google Colab.
 
-**Google Colab:**[![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qGr2a_C0wnt3Na2g1bH8emHEDCN0rYSk?usp=sharing)
+**Google Colab:** [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qGr2a_C0wnt3Na2g1bH8emHEDCN0rYSk?usp=sharing)
 ### 1. Google BigQuery
 Below SQL script is employed to query data from the dataset.
 ```sql
@@ -55,4 +55,22 @@ from sklearn.cluster import KMeans
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import scale, StandardScaler
+```
+Here how the data queries looks like.
+```python
+df = pd.io.gbq.read_gbq(SQL, project_id=project_id)
+df.head(10)
+```
+```python
+CUST_CODE	TOTAL_SPEND	AVG_MONTHLY_SPEND	STD_MONTHLY_SPEND	TOTAL_VISIT	AVG_MONTHLY_VISIT	STD_MONTHLY_VISIT	MODE_BASKET_SIZE	CUST_LIFETIME	DURATION_FROM_FIRST_PURCHASE	DURATION_FROM_LAST_PURCHASE
+0	CUST0000000181	2.44	2.440000	0.000000	1	1.000000	0.000000	1	0	547	547
+1	CUST0000000369	26861.24	34.261786	20.446128	220	7.857143	3.388155	2	811	812	1
+2	CUST0000000689	2957.13	36.507778	36.112964	16	1.777778	1.227262	3	337	350	13
+3	CUST0000000998	11.90	2.975000	2.135000	3	1.500000	0.500000	1	64	794	730
+4	CUST0000001163	158.96	9.935000	9.546134	4	1.000000	0.000000	3	609	623	14
+5	CUST0000001194	67333.41	92.364074	50.744659	103	3.814815	1.806102	3	790	806	16
+6	CUST0000002257	1.99	1.990000	0.000000	1	1.000000	0.000000	1	0	716	716
+7	CUST0000002499	0.34	0.340000	0.000000	1	1.000000	0.000000	1	0	814	814
+8	CUST0000002605	9.00	0.360000	0.120000	6	1.200000	0.400000	1	613	637	24
+9	CUST0000002637	1370.93	11.330000	5.284480	15	1.363636	0.642824	3	666	703	37
 ```
