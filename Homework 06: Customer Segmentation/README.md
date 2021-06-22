@@ -72,5 +72,6 @@ The followings are 7 features I will use for modelling the K-mean.
 * CUST_LIFETIME
 ### 3. Clusters
 To decide an appropriate numbers of cluster, I deploy the Elbow Method and Silhouette. The result of both methods is shown below. It seems K=3 should be selected.
+
 ![Picture10](https://user-images.githubusercontent.com/59596996/122943624-5e497580-d3a1-11eb-9a74-ef521c345aec.png)
 
