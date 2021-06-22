@@ -70,8 +70,19 @@ The followings are 7 features I will use for modelling the K-mean.
 * MODE_BASKET_SIZE
 * DURATION_FROM_LAST_PURCHASE
 * CUST_LIFETIME
-### 3. Clusters
-To decide an appropriate numbers of cluster, I deploy the Elbow Method and Silhouette. The result of both methods is shown below. It seems K=3 should be selected.
+### 3. Number of Clusters
+To decide about an appropriate number of clusters, I deploy the Elbow Method and Silhouette. The result of both methods is shown below. It seems K=3 should be selected.
 
 ![Picture10](https://user-images.githubusercontent.com/59596996/122943624-5e497580-d3a1-11eb-9a74-ef521c345aec.png)
+### 4. Feature Importance
+I use Random Forest to help determine which feature are important in clustering process.
+```python
+x = df_cluster[Features]
+y = df_cluster['CLUSTER']
+clf = RandomForestClassifier(criterion = 'entropy').fit(x, y)
+df_importance = pd.DataFrame({'Feature': Features, 'Importance' : clf.feature_importances_}).set_index('Feature')
+df_importance.sort_values('Importance').plot.barh(title='Repeat-Purchase Customers - Feature Importance')
+```
+![Picture11](https://user-images.githubusercontent.com/59596996/122944458-0b23f280-d3a2-11eb-8ddd-1cc139d875b5.png)
 
+As the result, this K-mean model listed 5 important features; CUST_LIFETIME, DURATION_FROM_LAST_PURCHASE, STD_MONTHLY_SPEND, STD_MONTHLY_VISIT, and AVG_MONTHLY_VISIT.
